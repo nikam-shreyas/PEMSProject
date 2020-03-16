@@ -1,0 +1,79 @@
+    
+<script src="GetParams.js">
+	
+</script>
+
+<div class="container" >
+    <div class="row" align="center">
+        <div class="col-sm-6" align="center">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Flow Consumption</div> <br>
+                <button class="btn btn-default" id="flowConsumption" [(disabled)] = "editable">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m3 <br> <br>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Power Consumption</div> <br>
+                <button class="btn btn-default" id="powerConsumption" [(disabled)] = "editable"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kWh <br> <br>
+            </div>
+        </div>
+    </div>
+    <div class="row" align="center">
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Efficiency</div> <br>
+                <input type="text" id="efficiency" [(disabled)] = "editable">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% <br> <br>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Savings</div>
+                <div class="panel-body">
+                    <br> <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            CO2 Emission
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" id="co2Emission" [(disabled)] = "editable">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Power
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" id="power" [(disabled)] = "editable">
+                        </div>
+                        <div class="col-sm-1" style="margin-left:-5%;">kWh
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Rupees
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" id="rupees" [(disabled)] = "editable">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            <mat-icon [ngStyle]="{'color':'green'}">fiber_manual_record</mat-icon>
+            Alarms present
+            
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
+
+    <div id="cml"></div>

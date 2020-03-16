@@ -1,0 +1,26 @@
+<form name="form1" class="form-style-5">
+
+    Enter device type:
+    <input type="text" id="entityType" list="deviceTypes" required><br>
+    <datalist id="deviceTypes">
+        <option value="DEVICE">
+    </datalist>
+    Enter device id:
+    <input type="text" id="entityId" list="devices" required>
+    <datalist id="devices">
+
+    </datalist><br>
+    <input type="button" value="Get Keys" (click)="valuegetcall()"><br>
+    <p id="sel"></p>
+    Enter a start date and time:
+    <input type="datetime-local" id="st" required><br><br>
+    Enter an end date and time:
+    <input type="datetime-local" id="end" required><br><br>
+    Enter limit for the no of entries:
+    <input type="text" id="lim" required><br><br>
+    <input type="button" value="Download" (click)="getGWTcall()">
+
+    <p id="demo"></p>
+    <p id="demo3"></p>
+
+</form>

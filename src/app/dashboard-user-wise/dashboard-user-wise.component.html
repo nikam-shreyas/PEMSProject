@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    Savings
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">CO2 Emission</div>
+                        <div class="col-sm-5"><input type="text" id="co2Emission" [(disabled)] = "editable"></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Power</div>
+                        <div class="col-sm-5"><input type="text" id="power" [(disabled)] = "editable"></div>
+                        <div class="col-sm-1">kWh</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">Rupees</div>
+                        <div class="col-sm-5"><input type="text" id="rupees" [(disabled)] = "editable"></div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+
+<div class="row" align="center">
+    <div class="col-sm-6">
+        <mat-icon [ngStyle]="{'color':'green'}">fiber_manual_record</mat-icon>
+        Alarms present
+    </div>
+    <div class="col-sm-6">
+        <div class="row" align="center">
+            <div class="col-sm-4">
+                No. of Stations Running
+            </div>
+            <div class="col-sm-8" style="margin-left: -20%;">
+                <input type="text" value="2" [(disabled)] = "editable">
+            </div>
+        </div>
+        <div class="row" align="center">
+            <div class="col-sm-4">
+                No. of PEMS Installed
+            </div>
+            <div class="col-sm-8" style="margin-left: -20%;">
+                <input type="text" [(disabled)] = "editable" value="3">
+            </div>
+        </div>
+    </div>
+</div>

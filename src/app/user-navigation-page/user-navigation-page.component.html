@@ -1,0 +1,40 @@
+<div style="background: #f0f0f0;height: 100%;">
+    <button type="button" mat-button (click)="drawer.toggle()" style="width: 4%;">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-drawer-container style="height: 100%; background: #f0f0f0;">
+        <mat-drawer #drawer class="example-sidenav" mode="side" style="width: 16%;">
+            <button class="btn btn-block" [routerLink]="'/homepage'">Dashboard</button>
+            <button class="btn btn-block">Process View</button>
+            <a [routerLink]="'chart'" routerLinkActive="active"><button class="btn btn-block">Trends </button></a>
+            <br>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Select Station
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button class="btn btn-block"><a [routerLink]="'station/user'" routerLinkActive="active">Station 1</a></button>
+                    <button class="btn btn-block">Station 2</button>
+                </mat-expansion-panel>
+                <br>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Reports
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <button class="btn btn-block">Data</button>
+                    <button class="btn btn-block">Alarms</button>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-drawer>
+        <div class="example-sidenav-content" style="margin-top: 10%; background: #f0f0f0;">
+            <router-outlet></router-outlet>
+            <!-- <app-dashboard-user-wise></app-dashboard-user-wise> -->
+        </div>
+
+    </mat-drawer-container>
+</div>

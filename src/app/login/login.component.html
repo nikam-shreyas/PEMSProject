@@ -1,0 +1,71 @@
+<div class="well">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="panel panel-default" >
+                <div class="panel-heading">
+                    <h1>
+                        Login to the portal!
+                    </h1>
+                    <h3>
+                        Sign in to your account!
+                    </h3>
+                </div>
+                <div class="panel-body" style="width:800px;">
+                    <div class="form-group">
+                        <label for="usr">UserName:</label>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="usr" type="text" class="form-control" name="UserName" placeholder="UserName"
+                                (input)="username=$event.target.value" value="{{ username }}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="pwd" type="password" class="form-control" name="password" placeholder="Password"
+                                (input)="password=$event.target.value" value="{{ password }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">UserType:</label>
+                        <select class="form-control" id="sel1" (change)="selectChangeHandler($event)">
+                            <option value="Administrator">Administrator</option>
+                            <option value="Superuser">Super User</option>
+                            <option value="User1">User1</option>
+                            <option value="User2">User2</option>
+                            <option value="User3">User3</option>
+                            <option value="User4">User4</option>
+                        </select>
+                    </div>
+                    <div style="width:700px; padding-left:30%; color: rgb(255, 0, 0)">
+                        <div class="bg-default">
+                            {{msg}}
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-primary btn-block" (click)="Validate()">Enter</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-info btn-block">Reset</button><br><br>
+                        </div>
+                    </div>
+                    <div align="center">
+                        <button type="button" class="btn btn-flat">Forgot or Change Password</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"> <br> <br> <br><br><br><br><br> <br> <br><br><br><br><br> <br> <br><br><br><br><br> <br>
+            <br>
+            <div>
+                Powered By:
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<div style="background: #f0f0f0; height: 100%">
+  <button class="btn btn-block" style="width: 4%;" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-drawer-container style="height: 100%; background: #f0f0f0;">
+    <mat-drawer #drawer class="example-sidenav" mode="side" style="width: 16%;">
+      <button class="btn btn-block">Select Zone</button>
+      <button class="btn btn-block"> <a [routerLink]="'user/admin'" routerLinkActive="active">Select User</a></button>
+       <button class="btn btn-block"><a [routerLink]="'station/admin'" routerLinkActive="active">Select Station</a></button>
+      <button class="btn btn-block">Dashboard</button>
+      <button class="btn btn-block">Process Flow</button>
+      <a [routerLink]="'chart'" routerLinkActive="active"><button class="btn btn-block">Graphs</button></a>
+      <br>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Reports
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <button class="btn btn-block">Data</button><br>
+          <button class="btn btn-block">Alarms</button>
+        </mat-expansion-panel>
+        <br>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              System Settings
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <button class="btn btn-block">Dashboard</button><br>
+          <button class="btn btn-block">Pump</button><br>
+          <button class="btn btn-block">Process Flow</button>
+        </mat-expansion-panel>
+        <br>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Admin Setting
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <button class="btn btn-block">Add Zone</button><br>
+          <button class="btn btn-block">Add User</button><br>
+          <button class="btn btn-block">Add System</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-drawer>
+    <div class="example-sidenav-content" style="background: #f0f0f0; margin-top: 5%;">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
+</div>
